@@ -5,7 +5,7 @@ async function addDistrictsGeoJson() {
  const polygons = L.geoJson(data)
  L.geoJson(data).addTo(map)
 }
-addDistrictsGeoJson()
+addDistrictsGeoJson(geojsons\tartu_city_districts_edu.geojson)
 const osm =
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
  maxZoom: 19,
