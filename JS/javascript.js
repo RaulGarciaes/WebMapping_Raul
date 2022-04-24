@@ -11,5 +11,5 @@ async function addDisctrictsGeoJson(geojsons/tartu_city_districts_edu.geojson){
  const response=await fetch(geojsons/tartu_city_districts_edu.geojson)
  const data=await response.json()
  const polygons=L.geoJson(data)
- polygon.addto(map)
+ polygon.addTo(map)
 }
