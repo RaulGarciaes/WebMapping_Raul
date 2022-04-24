@@ -1,5 +1,5 @@
 var map = L.map('map').setView([58.373523, 26.716045], 12);
-async function addDistrictsGeoJson() {
+async function addDistrictsGeoJson(url) {
  const response = await fetch()
  const data = await response.json()
  const polygons = L.geoJson(data)
