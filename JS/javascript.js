@@ -7,3 +7,9 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 })
 osm.addTo(map)
 
+async function addDisctrictsGeoJson(geojsons/tartu_city_districts_edu.geojson){
+ const response=await fetch(geojsons/tartu_city_districts_edu.geojson)
+ const data=await response.json()
+ const polygons=L.geoJson(data)
+ polygon.addto(map)
+}
