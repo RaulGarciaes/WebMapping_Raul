@@ -6,7 +6,6 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
  attribution: 'OpenStreetMap contributors',
 })
 osm.addTo(map)
-}
 function popUPinfo(feature, layer) {
  layer.bindPopup(feature.properties.NIMI)
 }
