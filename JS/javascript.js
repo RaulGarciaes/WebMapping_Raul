@@ -11,6 +11,7 @@ function popUPinfo(feature, layer) {
  layer.bindPopup(feature.properties.NIMI)
 }
 
+addDistrictsGeoJson('geojsons/tartu_city_districts_edu.geojson')
 async function addDistrictsGeoJson(url) {
  const response = await fetch(url)
  const data = await response.json()
@@ -19,8 +20,8 @@ async function addDistrictsGeoJson(url) {
  })
  polygons.addTo(map)
 }
-addDistrictsGeoJson('geojsons/tartu_city_districts_edu.geojson')
 
+addCelltowersGeoJson('geojsons/tartu_city_celltowers_edu.geojson')
 async function addCelltowersGeoJson(url) {
  const response = await fetch(url)
  const data = await response.json()
@@ -29,7 +30,6 @@ async function addCelltowersGeoJson(url) {
  clusters.addLayer(markers)
  clusters.addTo(map) 
 }
-addCelltowersGeoJson('geojsons/tartu_city_celltowers_edu.geojson')
 
 function defaultMapSettings() {
  map.setView([58.373523, 26.716045], 12)
