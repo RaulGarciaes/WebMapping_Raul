@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+    crossorigin=""/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" /> 
+  <link rel="stylesheet" href="CSS/Style.css" />
+  <title>Web GIS  Raúl García Estévez</title>
+</head>
+<body>
+  <img src="IMG\Banner1.jpg"
+    width="100%"
+    height="auto"
+    alt="Banner1">
+  <nav class="nav">
+    <li>
+      <a class="active" href="#Basic Map">Basic Map</a>
+      <a class="normal" href="#Choropleth Map">Choropeth Map</a>
+      <a class="normal" href="#Heatmap">Heatmap</a>
+    </li>
+  </nav>
+  <div>
+    <h1 class="title" href="#Title">Web GIS Application</h1>
+  </div>
+  <div class="container">
+  <button onclick="defaultMapSettings()">Default</button>
+    <div id="map" class="map">
+    </div>
+  </div>
+  <div class="footer">&copy Raúl García, Tartu University, 2022
+  </div>
+  <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+    crossorigin=""></script>
+  <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+  <script src="JS/javascript.js"></script>
+</body>
+</html>
