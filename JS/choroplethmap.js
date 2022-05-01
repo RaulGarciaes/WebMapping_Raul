@@ -11,24 +11,24 @@ function popUPinfo(feature, layer) {
  layer.bindPopup(feature.properties.NIMI)
 }
 
-addDistrictsGeoJson('geojsons/tartu_city_districts_edu.geojson')
-async function addDistrictsGeoJson(url) {
+addGeoJson('geojsons/tartu_city_districts_edu.geojson')
+async function addGeoJson(url) {
  const response = await fetch(url)
  const data = await response.json()
- const polygons = L.geoJson(data, {
-  onEachFeature: popUPinfo,
- })
- polygons.addTo(map)
-}
-
-addCelltowersGeoJson('geojsons/tartu_city_celltowers_edu.geojson')
-async function addCelltowersGeoJson(url) {
- const response = await fetch(url)
- const data = await response.json()
- const markers = L.geoJson(data)
- const clusters = L.markerClusterGroup()
- clusters.addLayer(markers)
- clusters.addTo(map) 
+  L.choropleth(data, {
+  valueProperty: 'OBJECTID',
+  scale: ['#ffffff', '#ff9900'],
+  steps: 5,
+  mode: 'q',
+  style: {
+   color: '#fff',
+   weight: 2,
+   fillOpacity: 0.8,
+  },
+  onEachFeature: function (feature, layer) {
+   layer.bindPopup('Value: ' + feature.properties.OBJECTID)
+  },
+ }).addTo(map)
 }
 
 function defaultMapSettings() {
